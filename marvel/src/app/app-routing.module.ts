@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ComicsWithNgModuleComponent } from './components/comics-with-ng-module/comics-with-ng-module.component';
 import { ComicsComponent } from './components/comics/comics.component';
 
 const routes: Routes = [
@@ -7,6 +8,10 @@ const routes: Routes = [
   {
     path: 'comics',
     component: ComicsComponent,
+  },
+  {
+    path: 'comics-with-ng-module',
+    component: ComicsWithNgModuleComponent,
   },
 ];
 
