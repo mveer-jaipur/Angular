@@ -20,6 +20,13 @@ const routes: Routes = [
         './components/comic-details-lazy-loading/comic-details-lazy-loading.component'
       ).then((m) => m.ComicDetailsLazyLoadingComponent),
   },
+  {
+    path: 'superhero',
+    loadChildren: () =>
+      import('./components/superhero/superhero.routes').then(
+        (m) => m.superHeroRoutes
+      ),
+  },
 ];
 
 @NgModule({
