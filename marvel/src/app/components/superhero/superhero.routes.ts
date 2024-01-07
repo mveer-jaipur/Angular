@@ -7,6 +7,7 @@ export const superHeroRoutes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'spiderman' },
   {
     path: 'spiderman',
+    // Environment injection using providers field in a Route configuration.
     providers: [SuperheroService],
     component: SpidermanComponent,
   },
