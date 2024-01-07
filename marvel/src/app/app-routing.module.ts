@@ -13,6 +13,13 @@ const routes: Routes = [
     path: 'comics-with-ng-module',
     component: ComicsWithNgModuleComponent,
   },
+  {
+    path: 'comic-details-lazy-loading',
+    loadComponent: () =>
+      import(
+        './components/comic-details-lazy-loading/comic-details-lazy-loading.component'
+      ).then((m) => m.ComicDetailsLazyLoadingComponent),
+  },
 ];
 
 @NgModule({
