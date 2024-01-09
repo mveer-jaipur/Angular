@@ -1,0 +1,7 @@
+<p>add-comics works!</p>
+<div>
+  <label for="name">Name: </label>
+  <input id="name" type="text" [formControl]="name" />
+  <p>Value: {{ name.value }}</p>
+  <button type="button" (click)="updateNameControl()">Update Name</button>
+</div>
