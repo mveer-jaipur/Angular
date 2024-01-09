@@ -8,16 +8,60 @@
 <br />
 <br />
 <div class="form-group">
-  <label for="name">Title: </label>
-  <input id="name" type="text" [formControl]="comicsFormGroup.controls.title" />
+  <label for="title">Title: </label>
+  <input
+    id="title"
+    type="text"
+    [formControl]="comicsFormGroup.controls.title"
+  />
 
   <br />
-  <label for="name">Description: </label>
+  <label for="description">Description: </label>
   <input
-    id="name"
+    id="description"
     type="text"
     [formControl]="comicsFormGroup.controls.description"
   />
   <br />
   <button type="button" (click)="updateComicsFormGroup()">Update Name</button>
 </div>
+
+<div>
+  <p>Nullability Check</p>
+  <label for="title">Title: </label>
+  <input id="title" type="text" [formControl]="title" />
+  <p>Value: {{ title.value }}</p>
+  <button type="button" (click)="reset()">Reset</button>
+</div>
+<br />
+<br />
+
+<div>
+  <p>Non Nullable Superhero</p>
+  <label for="superheroName">Superhero Name: </label>
+  <input id="superheroName" type="text" [formControl]="superheroName" />
+  <p>Value: {{ superheroName.value }}</p>
+  <button type="button" (click)="resetNonNullable()">Reset</button>
+</div>
+<br />
+<br />
+
+<div>
+  <p>Superhero Power Implicit type</p>
+  <label for="superheroPower">Superhero Power: </label>
+  <input id="superheroPower" type="text" [formControl]="superheroPower" />
+  <p>Value: {{ superheroPower.value }}</p>
+  <button type="button" (click)="setSuperheroPower()">Set Power</button>
+</div>
+<br />
+<br />
+
+<div>
+  <p>Superhero Power Explicit type</p>
+  <label for="superheroPower2">Superhero Power: </label>
+  <input id="superheroPower2" type="text" [formControl]="superheroPower2" />
+  <p>Value: {{ superheroPower2.value }}</p>
+  <button type="button" (click)="setSuperheroPower2()">Set Power</button>
+</div>
+<br />
+<br />
