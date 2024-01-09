@@ -5,3 +5,19 @@
   <p>Value: {{ name.value }}</p>
   <button type="button" (click)="updateNameControl()">Update Name</button>
 </div>
+<br />
+<br />
+<div class="form-group">
+  <label for="name">Title: </label>
+  <input id="name" type="text" [formControl]="comicsFormGroup.controls.title" />
+
+  <br />
+  <label for="name">Description: </label>
+  <input
+    id="name"
+    type="text"
+    [formControl]="comicsFormGroup.controls.description"
+  />
+  <br />
+  <button type="button" (click)="updateComicsFormGroup()">Update Name</button>
+</div>

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-comics',
@@ -17,5 +17,18 @@ export class AddComicsComponent {
 
     //Compile Error
     // console.warn(this.name?.value.test);
+  }
+
+  //FormGroup Type safety
+  comicsFormGroup = new FormGroup({
+    title: new FormControl(''),
+    description: new FormControl(''),
+  });
+
+  updateComicsFormGroup() {
+    console.warn(this.comicsFormGroup.controls);
+
+    //compile error
+    //console.warn(this.comicsFormGroup.controls.domain)
   }
 }
