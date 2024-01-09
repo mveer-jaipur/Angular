@@ -1,0 +1,12 @@
+<div class="superhero-array">
+  <p>superheros Array</p>
+  <div *ngFor="let superhero of superherosFormArray.controls">
+    {{ superhero.value }}
+  </div>
+  <br />
+  <button (click)="AddSuperhero()">Add Superhero</button>
+</div>
+
+<br />
+<br />
+<button (click)="logSuperhero()">Log Superhero(Please open console)</button>
