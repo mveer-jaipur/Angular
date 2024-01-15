@@ -7,10 +7,14 @@ const routes: Routes = [
   {
     path: 'add-comics',
     component: AddComicsComponent,
+    // Streamlined page title accessibility
+    title: 'add-comics',
   },
   {
     path: 'superheros',
     component: SuperherosComponent,
+    // Streamlined page title accessibility
+    title: 'superhero',
   },
 ];
 
